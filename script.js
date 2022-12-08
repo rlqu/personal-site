@@ -61,7 +61,22 @@ document.onkeypress = function(event) {
     if(loaderFinished) {
        return; 
     }
-    
+
+    body.querySelector('source-code-link').style.visibility = "visible";
+        toggle.style.visibility = "visible";
+
+        body.querySelector('loader-text').style.animation = "none";
+        document.getElementById('loader').style.opacity = "0%";
+        document.getElementById('loader').style.visibility = "hidden";
+
+        loaderFinished = true;
+}
+
+document.onmouseup = function(event) {
+    if(loaderFinished) {
+       return; 
+    }
+
     body.querySelector('source-code-link').style.visibility = "visible";
         toggle.style.visibility = "visible";
 
@@ -97,9 +112,12 @@ window.onload = function(event) {
         return;
     }
 
+    let welcomeText = "root# "
     if(isBrowserOnMobile) {
-        body.querySelector('loader-text').innerText = "Welcome! Tap on the screen to enter...";
+         welcomeText = welcomeText + "Welcome! Tap on the screen to enter...";
     } else {
-        body.querySelector('loader-text').innerText = "Welcome! Press any key to enter...";
+        welcomeText = welcomeText + "Welcome! Press any key to enter...";
     }
+
+    body.querySelector('loader-text').innerText = welcomeText;
 }
