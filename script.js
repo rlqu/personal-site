@@ -6,6 +6,9 @@ toggle.addEventListener('click', function() {
     if(lightMode) {
         document.querySelector('.personal-info').style.color = "white";
     
+        document.getElementById('source-code').style.color = "#6b6b6b";
+        document.getElementById('source-code').style.textDecorationColor = "#6b6b6b";
+
         const paragraphs = document.querySelectorAll('p');
 
         paragraphs.forEach(p => {
@@ -28,6 +31,9 @@ toggle.addEventListener('click', function() {
     }
 
     document.querySelector('.personal-info').style.color = "#121212";
+    
+    document.getElementById('source-code').style.color = "#000";
+    document.getElementById('source-code').style.textDecorationColor = "#000";
     
     const paragraphs = document.querySelectorAll('p');
 
