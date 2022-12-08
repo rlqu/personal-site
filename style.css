@@ -6,6 +6,92 @@ body {
     transition: 0.3s;
   }
 
+  #loader {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+ 
+    z-index: 100;
+    height: 100vh;
+    width: 100vw;
+    
+    transition: 0.3s;
+    transition-timing-function: ease-in;
+  }
+
+  loader-text {
+    color: white;
+    
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    animation: breathing 1.3s ease-out infinite;
+  }
+
+  @keyframes breathing {
+    0% {
+      opacity: 0%;
+    }
+  
+    10% {
+      opacity: 5%;
+    }
+
+    20% {
+      opacity: 25%;
+    }
+
+    30% {
+      opacity: 50%;
+    }
+
+    40% {
+      opacity: 75%;
+    }
+
+    50% {
+      opacity: 100%;
+    }
+
+    60% {
+      opacity: 75%;
+    }
+
+    70% {
+      opacity: 50%;
+    }
+
+    80% {
+      opacity: 25%;
+    }
+
+    90% {
+      opacity: 5%;
+    }
+
+    100% {
+      opacity: 0%;
+    }
+  
+    
+  }
+
+  source-code-link {
+    visibility: hidden;
+  }
+
+
+
   source-code-link a {
     transition: 0.3s;
     
@@ -90,6 +176,7 @@ body {
   }
 
   #toggle {
+    visibility: hidden;
     cursor: pointer;
     width: 24px;
     height: 24px;
