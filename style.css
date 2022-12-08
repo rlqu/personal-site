@@ -1,6 +1,7 @@
 body {
     background-color: #121212;
     user-select: none;
+  transition: 0.3s;
   }
   
   div.wrapper {
@@ -24,7 +25,6 @@ body {
     margin-top: -17px;
     font-family: 'Roboto Mono', monospace;
     font-weight: 300;
-   
     margin-bottom: 40px;
   }
   
@@ -66,4 +66,40 @@ body {
   div.space {
     width: 50px;
     height: 1px;
+  }
+
+  #toggle {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    border-image-width: 100%;
+    fill: white;
+    margin-top: 30px;
+    margin-right: 30px;
+    float: right;
+  }
+
+  #toggle:hover {
+    fill-opacity: 80%;
+  }
+
+  svg.moon {
+    visibility: visible;
+  }
+
+  svg.sun {
+    visibility: visible;
+  }
+
+  .social:hover {
+    fill-opacity: 80%;
+  }
+
+  div.loading-screen {
+    width: 100%;
+    height: 100%;
+    background: black;
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
   }
