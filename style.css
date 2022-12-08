@@ -1,12 +1,17 @@
-body {
+  body {
     background-color: #121212;
     user-select: none;
     font-family: 'Roboto Mono', monospace;
     
     transition: 0.3s;
+    overflow: hidden;
   }
 
   #loader {
+    
+    display: flex;
+    flex-direction: row;
+
     position: absolute;
     padding: 0;
     margin: 0;
@@ -24,73 +29,44 @@ body {
     
     transition: 0.3s;
     transition-timing-function: ease-in;
+    
+    justify-content: center;
+  
   }
 
-  loader-text {
+  a.loader-text {
     color: white;
-    
+    opacity: 100%;
+    margin-right: 10px;
+
+  }
+
+  div.loader-centered {
+    display: flex;
+    align-items: center;
     margin: 0;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    animation: breathing 1.3s ease-out infinite;
+    transform: translateY(-50%);
   }
 
-  @keyframes breathing {
-    0% {
-      opacity: 0%;
-    }
-  
-    10% {
-      opacity: 5%;
-    }
+  div.cursor {
+    background-color: white;
+    width: 10px;
+    height: 20px;
+    animation: blink-animation 1s steps(2, start) infinite;
 
-    20% {
-      opacity: 25%;
-    }
+  }
 
-    30% {
-      opacity: 50%;
+  @keyframes blink-animation {
+    to {
+      visibility: hidden;
     }
-
-    40% {
-      opacity: 75%;
-    }
-
-    50% {
-      opacity: 100%;
-    }
-
-    60% {
-      opacity: 75%;
-    }
-
-    70% {
-      opacity: 50%;
-    }
-
-    80% {
-      opacity: 25%;
-    }
-
-    90% {
-      opacity: 5%;
-    }
-
-    100% {
-      opacity: 0%;
-    }
-  
-    
   }
 
   source-code-link {
     visibility: hidden;
   }
-
-
 
   source-code-link a {
     transition: 0.3s;
@@ -156,8 +132,10 @@ body {
   
   div.hr {
     background-color: #3b3b3b;
-    height: 0.1px;
+    height: 1px;
     width: 60%;
+    opacity: 60%;
+    border-radius: 1px;
     margin-bottom: 30px;
     margin-top: 20px;
   }

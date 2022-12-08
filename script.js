@@ -65,7 +65,7 @@ document.onkeypress = function(event) {
     body.querySelector('source-code-link').style.visibility = "visible";
         toggle.style.visibility = "visible";
 
-        body.querySelector('loader-text').style.animation = "none";
+        body.querySelector('.loader-text').style.animation = "none";
         document.getElementById('loader').style.opacity = "0%";
         document.getElementById('loader').style.visibility = "hidden";
 
@@ -80,7 +80,7 @@ document.onmouseup = function(event) {
     body.querySelector('source-code-link').style.visibility = "visible";
         toggle.style.visibility = "visible";
 
-        body.querySelector('loader-text').style.animation = "none";
+        body.querySelector('.loader-text').style.animation = "none";
         document.getElementById('loader').style.opacity = "0%";
         document.getElementById('loader').style.visibility = "hidden";
 
@@ -95,7 +95,7 @@ document.ontouchend = function(event) {
     body.querySelector('source-code-link').style.visibility = "visible";
         toggle.style.visibility = "visible";
 
-        body.querySelector('loader-text').style.animation = "none";
+        body.querySelector('.loader-text').style.animation = "none";
         document.getElementById('loader').style.opacity = "0%";
         document.getElementById('loader').style.visibility = "hidden";
 
@@ -112,12 +112,11 @@ window.onload = function(event) {
         return;
     }
 
-    let welcomeText = "root# "
     if(isBrowserOnMobile) {
-         welcomeText = welcomeText + "Welcome! Tap on the screen to enter...";
+        body.querySelector('.loader-text').innerText = "Tap on the screen to enter...";
     } else {
-        welcomeText = welcomeText + "Welcome! Press any key to enter...";
+        body.querySelector('.loader-text').innerText = "Welcome! Press any key to enter...";
     }
 
-    body.querySelector('loader-text').innerText = welcomeText;
+    
 }
